@@ -77,7 +77,62 @@ curl -X POST http://localhost:3000/password-strength \
 **Example Response:**
 
 ```json
-{"calcTime":13,"password":"P@ssw0rd","guesses":17,"guessesLog10":1.2304489213782739,"sequence":[{"pattern":"dictionary","i":0,"j":7,"token":"P@ssw0rd","matchedWord":"password","rank":2,"dictionaryName":"passwords","reversed":false,"l33t":true,"subs":[{"letter":"a","substitution":"@"},{"letter":"o","substitution":"0"}],"subDisplay":"@ -> a, 0 -> o","baseGuesses":2,"uppercaseVariations":2,"l33tVariations":4,"guesses":16,"guessesLog10":1.2041199826559246}],"crackTimesSeconds":{"onlineThrottling100PerHour":612,"onlineNoThrottling10PerSecond":1.7,"offlineSlowHashing1e4PerSecond":0.0017,"offlineFastHashing1e10PerSecond":1.7e-9},"crackTimesDisplay":{"onlineThrottling100PerHour":"10 minutes","onlineNoThrottling10PerSecond":"2 seconds","offlineSlowHashing1e4PerSecond":"less than a second","offlineFastHashing1e10PerSecond":"less than a second"},"score":0,"feedback":{"warning":"This is similar to a commonly used password.","suggestions":["Add more words that are less common.","Capitalize more than the first letter.","Avoid predictable letter substitutions like '@' for 'a'."]}}
+{
+  "calcTime": 13,
+  "password": "P@ssw0rd",
+  "guesses": 17,
+  "guessesLog10": 1.2304489213782739,
+  "sequence": [
+    {
+      "pattern": "dictionary",
+      "i": 0,
+      "j": 7,
+      "token": "P@ssw0rd",
+      "matchedWord": "password",
+      "rank": 2,
+      "dictionaryName": "passwords",
+      "reversed": false,
+      "l33t": true,
+      "subs": [
+        {
+          "letter": "a",
+          "substitution": "@"
+        },
+        {
+          "letter": "o",
+          "substitution": "0"
+        }
+      ],
+      "subDisplay": "@ -> a, 0 -> o",
+      "baseGuesses": 2,
+      "uppercaseVariations": 2,
+      "l33tVariations": 4,
+      "guesses": 16,
+      "guessesLog10": 1.2041199826559246
+    }
+  ],
+  "crackTimesSeconds": {
+    "onlineThrottling100PerHour": 612,
+    "onlineNoThrottling10PerSecond": 1.7,
+    "offlineSlowHashing1e4PerSecond": 0.0017,
+    "offlineFastHashing1e10PerSecond": 1.7e-9
+  },
+  "crackTimesDisplay": {
+    "onlineThrottling100PerHour": "10 minutes",
+    "onlineNoThrottling10PerSecond": "2 seconds",
+    "offlineSlowHashing1e4PerSecond": "less than a second",
+    "offlineFastHashing1e10PerSecond": "less than a second"
+  },
+  "score": 0,
+  "feedback": {
+    "warning": "This is similar to a commonly used password.",
+    "suggestions": [
+      "Add more words that are less common.",
+      "Capitalize more than the first letter.",
+      "Avoid predictable letter substitutions like '@' for 'a'."
+    ]
+  }
+}
 ```
 
 **Contributing:**
